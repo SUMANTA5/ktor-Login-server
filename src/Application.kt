@@ -63,6 +63,9 @@ fun Application.module(testing: Boolean = false) {
     }
 
     routing {
+        get("/"){
+            call.respond("Hello Sumanta..")
+        }
         userRoutes(userDb,todoDb,jwt,hash)
         todoRoute(userDb,todoDb)
     }
